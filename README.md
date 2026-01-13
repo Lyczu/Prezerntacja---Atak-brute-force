@@ -45,12 +45,14 @@ Uruchom aplikacje
 ```
 docker run --rm -it -p 80:80 vulnerables/web-dvwa
 ```
-Wejdź na adres localhost
-Zaloguj się admin password
-Kliknij setup -> reset database
-Zaloguj się admin password
-Przejdź do zakładki brute force lub pod link http://localhost/vulnerabilities/brute/
-Spróbuj się zalogować
+
+- Wejdź na adres localhost
+- Zaloguj się admin password
+- Kliknij setup -> reset database
+- Zaloguj się admin password
+- Przejdź do zakładki brute force lub pod link http://localhost/vulnerabilities/brute/
+- Spróbuj się zalogować
+
 ---
 Utworz prosty plik txt
 ```
