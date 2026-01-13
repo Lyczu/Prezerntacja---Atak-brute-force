@@ -17,4 +17,5 @@ Dane do obliczeń:
  - Liczba aktywnych portfeli do trafienia: $100\ 000\ 000$ ($10^8$)
  - Moc obliczeniowa Atheny: $100$ miliardów prób/sekundę ($10^{11}$)
  - Rok: ok. $31,5$ mln sekund
+
 Pytanie: Ile lat trwałoby sprawdzanie fraz, aż statystycznie trafimy na jeden z aktywnych portfeli?
