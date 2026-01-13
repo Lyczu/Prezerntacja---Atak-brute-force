@@ -86,13 +86,13 @@ while read password; do
     fi
 done < "$PASSFILE"
 ```
-URL - link to formularza z loginem
-COOKIE - Pozyskaj je wchodząc do konsoli i kopiują wartość z PHPSESSID np.
+- URL - link to formularza z loginem
+- COOKIE - Pozyskaj je wchodząc do konsoli i kopiują wartość z PHPSESSID np.
 ```
 COOKIE="security=low; PHPSESSID=uajef67tv5p9173593cdtp9id6"
 ```
-USERNAME - nazwa użytkownika którego łamiemy
-PASSFILE - plik ze słownikiem haseł
+- USERNAME - nazwa użytkownika którego łamiemy
+- PASSFILE - plik ze słownikiem haseł
 
 Uruchom skrypt
 ```
