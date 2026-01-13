@@ -87,10 +87,12 @@ while read password; do
 done < "$PASSFILE"
 ```
 - URL - link to formularza z loginem
-- COOKIE - Pozyskaj je wchodząc do konsoli i kopiują wartość z PHPSESSID np.
+- COOKIE - Pozyskaj je wchodząc do konsoli -> storage -> Cookies i skopiuj wartość z PHPSESSID np.
 ```
 COOKIE="security=low; PHPSESSID=uajef67tv5p9173593cdtp9id6"
 ```
+<img width="1529" height="585" alt="image" src="https://github.com/user-attachments/assets/665b2f86-a22b-43f0-bc26-69d454cf2350" />
+
 - USERNAME - nazwa użytkownika którego łamiemy
 - PASSFILE - plik ze słownikiem haseł
 
