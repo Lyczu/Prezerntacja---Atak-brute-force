@@ -13,7 +13,7 @@ Rezpozytorium stworzone na potrzeby zajęć BAIiM
 
 Cel: Oblicz, ile lat zajęłoby superkomputerowi Athena (AGH) włamanie się do dowolnego z istniejących portfeli z 12-wyrazową frazą seed.
 Dane do obliczeń:
- - Wszystkie kombinacje (12 słów): ok. $3,4 \times 10^{38}$
+ - Wszystkie kombinacje (12 słów): ok. $3,4 \times 10^{38}$ (dla standardu BIP-39 który zakłada 2048 słów)
  - Liczba aktywnych portfeli do trafienia: $100\ 000\ 000$ ($10^8$)
  - Moc obliczeniowa Atheny: $100$ miliardów prób/sekundę ($10^{11}$)
  - Rok: ok. $31,5$ mln sekund
