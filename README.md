@@ -1,6 +1,10 @@
 # Prezerntacja---Atak-brute-force
 Rezpozytorium stworzone na potrzeby zajęć BAIiM
 
+# Quiz
+
+https://docs.google.com/document/d/1zRP1K-KHqLoMIf1BqRveEw61S-aPanXoZuozfXDTEdg/edit?usp=sharing
+
 ## Zadania
 ### ZAD 1 Audyt Osobisty i OSINT
 
